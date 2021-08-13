@@ -13,6 +13,10 @@ span {
   font-size: larger;
 }
 
+.band-name {
+  text-align: center;
+}
+
 .container {
   display: grid;
   gap: 1rem;
@@ -22,6 +26,7 @@ span {
 
 .loader {
   display: inline-block;
+  text-align: center;
   width: 3rem;
   height: 3rem;
 }

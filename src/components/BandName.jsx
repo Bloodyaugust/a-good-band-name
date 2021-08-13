@@ -28,7 +28,7 @@ export default function BandName() {
 
   return (
     <div className={styles.container}>
-      <span>{bandName}</span>
+      <span className={styles['band-name']}>{bandName}</span>
       {loadBandName
         ? <div className={styles.loader} />
         : <button type="button" onClick={() => { setLoadBandName(true); }}>Get A Good Band Name</button>
