@@ -1,13 +1,18 @@
 {
-  "name": "@example/starter",
+  "name": "@example/band-name",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "astro dev",
-    "build": "astro build"
+    "build": "astro build && touch ./dist/.nojekyll",
+    "test": "jest"
   },
   "devDependencies": {
-    "astro": "^0.18.10",
-    "@astrojs/renderer-react": "^0.2.0"
+    "@astrojs/renderer-react": "^0.2.0",
+    "astro": "0.18.9",
+    "jest": "^27.0.6"
+  },
+  "dependencies": {
+    "@bloodyaugust/use-fetch": "^1.1.0"
   }
 }
