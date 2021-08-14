@@ -1,0 +1,5 @@
+{
+  "base": "https://8o9iyd7q3e.execute-api.us-east-1.amazonaws.com/production/",
+  "curated": "https://8o9iyd7q3e.execute-api.us-east-1.amazonaws.com/production/curated",
+  "random": "https://8o9iyd7q3e.execute-api.us-east-1.amazonaws.com/production/random"
+}

@@ -28,6 +28,7 @@ const adjectives = [
   'Some',
   'Semblance',
   'Aquatic',
+  'Buffalo',
 ];
 const nouns = [
   'Buzzards',
@@ -71,6 +72,7 @@ const nouns = [
   'Party',
   'Stars',
   'Darkness',
+  'Buffalo',
 ];
 const verbs = [
   'Fucking',
@@ -89,6 +91,7 @@ const verbs = [
   'Presentment',
   'Dance',
   'Timeout',
+  'Buffalo',
 ];
 
 module.exports.curated = async (event) => {

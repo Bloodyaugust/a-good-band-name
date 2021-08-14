@@ -1,5 +1,6 @@
 ---
-import BandName from '../components/BandName.jsx';
+import { Markdown } from 'astro/components';
+import APIInfo from '../api-info.json';
 ---
 <html lang="en">
   <head>
@@ -14,11 +15,20 @@ import BandName from '../components/BandName.jsx';
   <body>
     <main>
       <header>
-        <h1>A Good Band Name</h1>
-        <a href="/api">API Docs</a>
+        <a href="/"><h1>A Good Band Name</h1></a>
       </header>
-      <div class="app">
-        <BandName:visible />
+      <div class="endpoints">
+        <Markdown>
+          # API Documentation
+          
+          You can use our endpoints for all your Bandname As A Service(BAAS) needs
+
+          To get a curated band name:
+          <Markdown content={`\`\`\`bash\r\ncurl ${APIInfo.curated}\r\n\`\`\``} />
+
+          To get a random band name:
+          <Markdown content={`\`\`\`bash\r\ncurl ${APIInfo.random}\r\n\`\`\``} />
+        </Markdown>
       </div>
       <footer>
         <h3>Made with ♥ (and <a href="https://astro.build">Astro</a>) by <a href="https://grichey.me">Greyson</a> and <a href="https://linktr.ee/quirky.calligrapher">Anne</a></h3>
@@ -32,18 +42,20 @@ a {
   color: var(--color-font);
 }
 
-header {
-  justify-content: center;
-  text-align: center;
-}
-
-footer {
+header, footer {
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
-.app {
-  margin: 4rem 0;
+main {
+  display: grid;
+  gap: 4rem;
+}
+
+.endpoints {
+  justify-self: center;
+  min-width: 0;
+  width: min-content;
 }
 </style>
